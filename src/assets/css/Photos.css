@@ -67,6 +67,11 @@
 }
 
 @media (max-width: 480px) {
+    .photo-section {
+        height: 80%;
+        width: 80%;
+    }
+
     .photo-section img {
         flex-basis: calc(100% - 10px);
     }

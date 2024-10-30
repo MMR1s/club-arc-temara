@@ -1,0 +1,250 @@
+/* Container for the entire section */
+.ActivitiesEntrainement-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    overflow: hidden;
+    /* Ensure the overlay stays within bounds */
+}
+
+/* The video background */
+.ActivitiesEntrainement-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    /* Ensures it stays behind both content and overlay */
+}
+
+/* Adding the overlay over the video */
+.ActivitiesEntrainement-container::before {
+    background: rgba(0, 0, 0, 0.1);
+    /* Light black overlay */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.1); */
+    /* background: #614d0b55; */
+    /* Semi-transparent black overlay */
+    z-index: -1;
+    /* Behind the content but in front of the video */
+}
+
+/* Hover effect */
+.ActivitiesEntrainement-container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ActivitiesEntrainement-container .dropdown-container {
+    position: relative;
+    /* Make sure this container has a positioning context */
+    z-index: 10;
+    /* Set a high z-index */
+}
+
+.ActivitiesEntrainement-container .component-display {
+    width: 100%;
+    max-width: 80%;
+    padding: 1em;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ActivitiesEntrainement-container .component-display:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ActivitiesEntrainement-container h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.swiper {
+    padding: 5px 0 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    padding: 1.5em 0.75em;
+    /* Slightly more padding for spacing */
+    margin: 0 auto;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+}
+
+.swiper-button-next {
+    right: -5px;
+}
+
+.swiper-button-prev {
+    left: -5px;
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 0.5em;
+}
+
+.toggle-button {
+    padding: 1.5em 5em;
+    width: 40vw;
+    border: none;
+    border-radius: 8px;
+    background-color: #f9cb34;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button:hover {
+    background-color: #ffb800;
+    transform: scale(1.05);
+}
+
+.toggle-button.active {
+    background-color: #e4a600;
+    box-shadow: 0 10px 50px #ffb700ad;
+}
+
+
+/* Modal styles */
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    /* Container adjustments */
+    .ActivitiesEntrainement-container {
+        padding: 2em 1em;
+    }
+
+    /* Component Display */
+    .ActivitiesEntrainement-container .component-display {
+        max-width: 90%;
+        padding: 0.75em;
+    }
+
+    /* Title Font Size */
+    .ActivitiesEntrainement-container h1 {
+        font-size: 24px;
+    }
+
+    /* Toggle Button */
+    .toggle-button {
+        width: 80vw;
+        padding: 1em 3em;
+        font-size: 0.9em;
+    }
+
+    /* Swiper Buttons Position */
+    .swiper-button-next {
+        right: 0;
+    }
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    /* Modal Adjustments */
+    .modal-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Smaller screens like phones */
+    .ActivitiesEntrainement-container {
+        padding: 1.5em 0.5em;
+    }
+
+    .ActivitiesEntrainement-container h1 {
+        font-size: 20px;
+    }
+
+    .component-display {
+        max-width: 95%;
+        padding: 0.5em;
+    }
+
+    .toggle-button {
+        width: 90vw;
+        padding: 1em 2em;
+        font-size: 0.85em;
+    }
+
+    /* Modal Adjustments */
+    .modal-content {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .close-btn {
+        font-size: 20px;
+        top: 8px;
+        right: 10px;
+    }
+}

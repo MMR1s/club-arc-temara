@@ -1,0 +1,112 @@
+.activities-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Centers the cards in the container */
+    padding: 20px;
+}
+
+
+
+.activities-card {
+    /* Card background color */
+    background-color: #ffffff;
+    /* Card border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    width: 90%;
+    /* Fixed width */
+    /* Space between cards */
+    overflow: hidden;
+    /* Ensure content stays inside the card */
+    text-align: center;
+    /* Center align text */
+    transition: transform 0.2s;
+    /* Animation on hover */
+}
+
+.activities-card img {
+    width: 100%;
+    /* Makes image take full width of the card */
+    height: 150px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Crop image to fit */
+}
+
+.activities-card h2 {
+    font-size: 1.5rem;
+    /* Title font size */
+    margin: 10px 0;
+    /* Spacing around the title */
+}
+
+.activities-card p {
+    font-size: 1rem;
+    /* Description font size */
+    padding: 0 15px;
+    /* Padding around description */
+}
+
+.activities-card:hover {
+    transform: scale(1.05);
+    /* Scale card on hover */
+}
+
+.swiper-slide-active .activities-card:hover {
+    transform: scale(1.15);
+    /* Scale card on hover */
+}
+
+.swiper-slide-active .activities-card {
+    transform: scale(1.08);
+    /* Slightly larger active slide */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}
+
+.swiper-pagination-bullet {
+    background: #bbb;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+    transition: background 0.3s;
+    border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    background: #e4b419;
+    /* Darker and more visible active bullet */
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #e4b419;
+    width: 45px;
+    height: 45px;
+    transition: color 0.3s, transform 0.3s;
+    /* Smooth transition on hover */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    color: #463809;
+    transform: scale(1.1);
+    /* Slight scaling on hover */
+}
+
+
+@media (max-width: 379px) {
+    .activities-card {
+        margin: 0 -2px;
+    }
+}
+
+@media (max-width: 321px) {
+    .activities-card {
+        margin: 0 -4px;
+    }
+}

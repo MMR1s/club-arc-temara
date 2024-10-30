@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    transition: padding 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-logo img {
+    width: 70px;
+    transition: width 0.3s ease;
+}
+
+
+.navbar.scrolled .nav-logo img {
+    width: 50px;
+}

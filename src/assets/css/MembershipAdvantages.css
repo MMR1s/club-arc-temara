@@ -1,0 +1,146 @@
+.membership-section {
+    /* Subtle gradient for softer look */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    /* Adds glassy effect */
+    background: rgba(255, 255, 255, 0.9);
+    /* Added transparency for a more glassy effect */
+    display: flex;
+    /* max-height: 80vh; */
+    border-radius: 0 0 2em 0;
+}
+
+.membership-benefits {
+    width: 90%;
+    text-align: center;
+    padding: 2em 0 4em 0;
+    margin: 0 auto;
+}
+
+.membership-benefits h2 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 0.75em;
+    color: #222;
+    /* Darker shade for contrast */
+}
+
+.membership-benefits p {
+    color: #555;
+    /* Softer grey tone */
+    max-width: 35em;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    /* Better readability */
+}
+
+
+.slick-list,
+.slick-track {
+    margin-top: 15px;
+    padding-bottom: 2em;
+    /* Combined padding for better alignment */
+}
+
+.benefit-card {
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    border-radius: 2em;
+    /* Softer border radius */
+    transition: all 0.3s ease;
+    max-width: 69%;
+    margin: 0 auto;
+
+    /* Center cards within the section */
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+    /* Slightly stronger hover effect */
+}
+
+.benefit-card h3 {
+    font-size: 3.2em;
+    color: #f9cb34;
+    /* Softer orange for better harmony */
+}
+
+.benefit-card h4 {
+    min-height: 2.5em;
+    font-size: 1.6em;
+    margin: 0.5em 0;
+    color: #333;
+}
+
+.benefit-card p {
+    min-height: 4em;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.benefit-card a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 1.5em;
+    background-color: #f9cb34;
+    /* Softer tone */
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.benefit-card a:hover {
+    background-color: #ffc400;
+    /* More subtle hover color */
+}
+
+/* Slick Slider Navigation */
+.slick-prev,
+.slick-next {
+    color: #ffc70f;
+    /* Matching the new color scheme */
+    font-size: 2em;
+    opacity: 0.75;
+    /* Softer opacity for a cleaner look */
+    transition: opacity 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1;
+    /* Fully opaque on hover */
+}
+
+/* Dot Navigation Styles */
+.slick-dots li button:before {
+    color: #ffc400;
+    /* Dots matching theme */
+    font-size: 0.75em;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ffc400;
+    /* Highlight active dot */
+}
+
+@media (max-width: 912px) {
+    .benefit-card:hover {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 700px) {
+
+
+    .slick-prev::before,
+    .slick-next::before {
+        display: none;
+    }
+
+
+}

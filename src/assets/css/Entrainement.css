@@ -1,0 +1,67 @@
+.entrainement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Centers the cards in the container */
+    padding: 20px;
+}
+
+.entrainement-card {
+    /* Card background color */
+    background-color: #ffffff;
+    /* Card border */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    width: 90%;
+    /* Fixed width */
+    /* margin: 10px; */
+    /* Space between cards */
+    overflow: hidden;
+    /* Ensure content stays inside the card */
+    text-align: center;
+    /* Center align text */
+    transition: transform 0.2s;
+    /* Animation on hover */
+}
+
+.entrainement-card img {
+    width: 100%;
+    /* Makes image take full width of the card */
+    height: 150px;
+    /* Fixed height for images */
+    object-fit: cover;
+    /* Crop image to fit */
+}
+
+.entrainement-card h2 {
+    font-size: 1.5rem;
+    /* Title font size */
+    margin: 10px 0;
+    /* Spacing around the title */
+}
+
+.entrainement-card p {
+    font-size: 1rem;
+    /* Description font size */
+    padding: 0 15px;
+    /* Padding around description */
+}
+
+.entrainement-card:hover {
+    transform: scale(1.05);
+    /* Scale card on hover */
+}
+
+.swiper-slide-active .entrainement-card:hover {
+    transform: scale(1.15);
+    /* Scale card on hover */
+}
+
+.swiper-slide-active .entrainement-card {
+    transform: scale(1.09);
+    /* Slightly larger active slide */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow */
+}

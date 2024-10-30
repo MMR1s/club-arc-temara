@@ -1,0 +1,237 @@
+.contact-section {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 50%), url("../images/gallery-7.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 2em 5%;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 57.1em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.contact-info {
+    max-width: 45%;
+    flex: 1 1 40%;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffc400;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.info-details p {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.info-details i {
+    margin-right: 0.5rem;
+    color: #ffc400;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 45%;
+    flex: 1 1 40%;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+input {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 15px rgba(255, 196, 0, 0.8);
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    flex: 1;
+}
+
+.form-container button {
+    background-color: #ffc400;
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-container button:hover {
+    background-color: #ffd857;
+    transform: translateY(-3px);
+}
+
+.training-plan-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Boxed Button Group Styles */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-group .training-plan-label {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    /* color: rgba(255, 255, 255, 0.9); */
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.button-group div {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.option-button {
+    padding: 0.75rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffc400;
+}
+
+.option-button.selected {
+    background-color: #ffc400;
+    color: #000;
+}
+
+/* Add box-shadow to .button-group if it contains an .option-button with the .selected class */
+.button-group .option-button.selected~.button-group,
+.button-group .option-button.selected {
+    box-shadow: 0 8px 30px rgba(255, 196, 0, 0.5);
+    /* Customize the shadow to your preference */
+}
+
+
+@media (max-width: 768px) {
+    .contact-section {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0) 40%), url("../images/gallery-7.jpg");
+    }
+
+    .contact-container {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info,
+    .form-container {
+        max-width: 100%;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .form-container {
+        padding: 2rem 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .form-container button {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .button-group div {
+        flex-direction: column;
+    }
+
+
+}

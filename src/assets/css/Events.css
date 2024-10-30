@@ -1,0 +1,102 @@
+/* Custom styles for the calendar */
+
+.events h1 {
+    text-align: center;
+    text-shadow: 0px 10px 20px #fbd65e;
+
+}
+
+.rbc-calendar {
+    background-color: #f8f9fa;
+    /* Light background for the entire calendar */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.rbc-toolbar {
+    background-color: #f9cb34;
+    /* Change toolbar background */
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    /* min-width: 50em; */
+
+}
+
+.rbc-toolbar button {
+    background-color: #9c7905;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.rbc-toolbar button:hover {
+    background-color: #fbd65e;
+}
+
+.rbc-event {
+    background-color: #28a745;
+    /* Custom color for events */
+    color: white;
+    border-radius: 5px;
+}
+
+.rbc-event:hover {
+    background-color: #218838;
+}
+
+.rbc-today {
+    background-color: #e9ecef;
+    /* Custom style for today's date */
+}
+
+.rbc-off-range-bg {
+    background-color: #f1f3f5;
+    /* Grayed-out dates in other months */
+}
+
+/* Modal Overlay */
+.modal-unique-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-unique-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close Button */
+.modal-unique-close {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal-unique-close:hover {
+    background-color: #d32f2f;
+}
+
+/* Add additional styling if needed */
